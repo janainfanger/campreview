@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2> Campgrounds </h2>
+<p>Here are some campgrounds! </p>
+<table class='table'>
+    <tr>
+        <th>Campground Name</th>
+
+{% for item in campground %}
+
+        <tr>
+            <td>{{ item.name  }}</td>
+            <td>{{ item.address  }}</td>
+            <td>{{ item.features  }}</td>
+            <td>{{ item.description }}</td>
+
+        </tr>
+
+{% endfor %}
+    </tr>
+
+
+
+
+</table>
+
+{% endblock %}
