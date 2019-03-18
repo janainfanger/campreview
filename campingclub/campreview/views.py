@@ -14,6 +14,7 @@ def campground(request):
 
 
 #form view
+@login_required
 def addCampground(request):
     form=CampForm
     if request.method=='POST':
@@ -26,4 +27,10 @@ def addCampground(request):
         form=CampForm()
     return render (request, 'campreview/addcampground.html', {'form': form})
 
+def loginmessage(request):
+    return render(request, 'campreview/loginmessage.html')
 
+def logoutmessage(request):
+    return render(request, 'campreview/logoutmessage.html')
+
+    
