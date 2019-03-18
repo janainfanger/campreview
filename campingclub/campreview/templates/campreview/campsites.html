@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for site in campsite.all %}
+
+<h2>{{ site.CampgroundID }}</h2>
+<p>{{ site.campsiteID}}</p>
+<p>{{ site.campsitefeatures }}</p>
+
+
+{% endfor %}
+
+{% endblock %}

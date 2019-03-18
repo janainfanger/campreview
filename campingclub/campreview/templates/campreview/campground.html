@@ -9,7 +9,7 @@
 {% for item in campground %}
 
         <tr>
-            <td>{{ item.name  }}</td>
+            <td><a href="{% url 'campsites' id=item.id %}">{{ item.name  }}</a></td>
             <td>{{ item.address  }}</td>
             <td>{{ item.features  }}</td>
             <td>{{ item.description }}</td>

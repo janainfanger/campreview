@@ -12,6 +12,10 @@ def campground(request):
     campground=Campground.objects.all()
     return render(request, 'campreview/campground.html', {'campground': campground})
 
+def campsites(request, id):
+    campsite=Campsite.objects.filter(CampgroundID =id)
+    context = {'campsite': campsite}
+    return render (request, 'campreview/campsites.html', context=context)
 
 #form view
 @login_required
@@ -33,4 +37,4 @@ def loginmessage(request):
 def logoutmessage(request):
     return render(request, 'campreview/logoutmessage.html')
 
-    
+
